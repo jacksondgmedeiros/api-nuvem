@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         }
 
         if (userRepository.existsByAccountNumber(user.getAccount().getNumber())) {
-            throw new IllegalArgumentException(" Account number already exists!");
+            throw new IllegalArgumentException(" Conta já existe!");
         }
 
         return userRepository.save(user);
